@@ -71,10 +71,13 @@ class DashboardViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Dashboard"
         
+       if !iPhonX
+       {
         constraintHeightViewProgress.constant = aspectRatio * 179
         constraintHeightCollection.constant = aspectRatio * 191
-      topSpaceCollectionTimeline.constant = aspectRatio * 20
+        topSpaceCollectionTimeline.constant = aspectRatio * 20
         topSpaceViewTimeline.constant = aspectRatio * 51
+        }
         resetCurrentProgress()
         startUpdatingMotion()
         
