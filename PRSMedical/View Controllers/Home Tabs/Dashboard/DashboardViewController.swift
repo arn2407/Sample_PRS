@@ -25,6 +25,8 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var labelCurrentTiming : UILabel!
     @IBOutlet weak var labelGoal : UILabel!
     @IBOutlet weak var buttonCushionName : UIButton!
+    @IBOutlet weak var buttonNext : UIButton!
+    @IBOutlet weak var buttonPrevious : UIButton!
     @IBOutlet weak var viewPickerComponent : UIView!
     @IBOutlet weak var picker  : UIPickerView!
     private var isTimerStarted = false
@@ -198,6 +200,16 @@ class DashboardViewController: UIViewController {
         
         loadTimeLineData()
     }
+    
+    @IBAction func actionTimelinePageChange(_ sender : UIButton)
+    {
+        
+        buttonNext.isEnabled = sender.tag == 0
+        buttonPrevious.isEnabled = sender.tag == 1
+       let indexpath = IndexPath.init(item: sender.tag, section: 0)
+        collectionTimeline.scrollToItem(at: indexpath, at: .centeredHorizontally, animated: false)
+        collectionTimeline.reloadItems(at: [indexpath])
+    }
 
     /*
     // MARK: - Navigation
@@ -221,7 +233,7 @@ extension DashboardViewController : CollectionViewDelegates
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case collectionTimeline:
-            return 1
+            return 2
         default:
             return  arrToday.count
         }
@@ -234,7 +246,7 @@ extension DashboardViewController : CollectionViewDelegates
         switch collectionView {
         case collectionTimeline:
             let cell = collectionView.dequeReusableCell(for: indexPath) as TimlineCollectionViewCell
-           cell.chartType = .line
+            cell.chartType = indexPath.item == 0 ? .line : .bar
             cell.chartData = self.timelineData
             return cell
         default:

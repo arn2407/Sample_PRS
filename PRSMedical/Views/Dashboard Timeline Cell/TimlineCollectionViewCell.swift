@@ -14,8 +14,36 @@ enum ChartType {
     case bar
 }
 class TimlineCollectionViewCell: BaseCollectionViewCell {
+    
+    var limit = 0.0
+    
     private lazy var lineChart : LineChartView = {
         let chart = LineChartView()
+        chart.dragEnabled = false
+        chart.setScaleEnabled(false)
+        chart.pinchZoomEnabled = false
+        chart.chartDescription?.enabled = false
+        chart.legend.enabled = false
+        
+        
+        chart.leftAxis.enabled = true
+        chart.leftAxis.spaceTop = 0.4
+        chart.leftAxis.spaceBottom = 0.4
+        chart.leftAxis.axisMinimum = 0
+        chart.leftAxis.axisMaximum = 90
+        chart.leftAxis.setLabelCount(7, force: true)
+        
+        chart.rightAxis.enabled = false
+        chart.xAxis.enabled = true
+        chart.xAxis.granularity = 3600 * 24
+        chart.xAxis.valueFormatter = DateValueFormatter()
+        chart.xAxis.centerAxisLabelsEnabled = true
+        chart.xAxis.labelPosition = .top
+        return chart
+    }()
+    
+    private lazy var barChart : BarChartView = {
+        let chart = BarChartView()
         chart.dragEnabled = false
         chart.setScaleEnabled(false)
         chart.pinchZoomEnabled = false
@@ -54,13 +82,14 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
     {
         didSet
         {
-            setupLineChart()
+            
+            chartType == .line ?  setupLineChart() : setupBarChart()
         }
     }
     var chartData = [(Double , TimeInterval)]()
     {
         didSet{
-            updateLineDataSet()
+            chartType == .line ?  updateLineDataSet() : updateBarDataSet()
         }
     }
     override func setupCell() {
@@ -70,10 +99,19 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
     
     private func setupLineChart()
     {
+        barChart.removeFromSuperview()
         lineChart.removeConstraints(lineChart.constraints)
         addSubview(lineChart)
         addConstraints("H:|[v0]|", views: lineChart)
         addConstraints("V:|[v0]|", views: lineChart)
+    }
+    private func setupBarChart()
+    {
+        lineChart.removeFromSuperview()
+        barChart.removeConstraints(barChart.constraints)
+        addSubview(barChart)
+        addConstraints("H:|[v0]|", views: barChart)
+        addConstraints("V:|[v0]|", views: barChart)
     }
     private func updateLineDataSet()
     {
@@ -83,13 +121,7 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
             lineChart.noDataText = "No Cushion found"
             return}
     let values = chartData.compactMap{ChartDataEntry(x: $0.1, y: $0.0)}
-//        lineDataSet.values = entrySets
-//        let data = LineChartData(dataSet: lineDataSet)
-//        lineChart.data = data
 
-        
-    
-    
        lineDataSet.values = values
 
         
@@ -97,6 +129,35 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
        
         
         lineChart.data = data
+    }
+    
+    private func updateBarDataSet()
+    {
+        
+        
+        if chartData.isEmpty {
+            barChart.noDataText = "No Cushion found"
+            return}
+//        let values = chartData.compactMap{BarChartDataEntry(x: $0.1, y: 20)}
+//
+//        let barchartDataSet = BarChartDataSet(values: values, label: "")
+//        barchartDataSet.drawIconsEnabled = false
+//        barchartDataSet.drawValuesEnabled = false
+//
+        let yVals = chartData.map { (i) -> BarChartDataEntry in
+        
+            
+            return BarChartDataEntry(x: i.1, yValues: [i.0])
+        }
+        
+        let set = BarChartDataSet(values: yVals, label: "")
+        set.drawIconsEnabled = false
+        set.setColor(#colorLiteral(red: 0.5019607843, green: 0.7058823529, blue: 0.2549019608, alpha: 1))
+        
+        let data = BarChartData(dataSet: set)
+        data.barWidth = 1.0
+        
+        barChart.data = data
     }
     
     

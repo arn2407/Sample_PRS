@@ -906,15 +906,21 @@ our Terms of Service and Privacy Policy.</string>
                                         <color key="textColor" red="0.19607843137254902" green="0.396078431372549" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEL-d2-Nq6">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEL-d2-Nq6">
                                         <rect key="frame" x="308" y="8" width="59" height="30"/>
                                         <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="actionTimelinePageChange:" destination="usb-Fv-kwU" eventType="touchUpInside" id="nS2-Oc-Paw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ug-5x-FTX">
                                         <rect key="frame" x="241" y="8" width="59" height="30"/>
                                         <state key="normal" title="Previous"/>
+                                        <connections>
+                                            <action selector="actionTimelinePageChange:" destination="usb-Fv-kwU" eventType="touchUpInside" id="NST-nk-2JF"/>
+                                        </connections>
                                     </button>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ReI-JV-rlL">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ReI-JV-rlL">
                                         <rect key="frame" x="8" y="58" width="359" height="180"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KvY-4K-N44">
@@ -978,6 +984,8 @@ our Terms of Service and Privacy Policy.</string>
                     <navigationItem key="navigationItem" id="kHl-ir-QQo"/>
                     <connections>
                         <outlet property="buttonCushionName" destination="cX4-JC-dyD" id="QAL-li-euH"/>
+                        <outlet property="buttonNext" destination="WEL-d2-Nq6" id="VEK-vs-5b9"/>
+                        <outlet property="buttonPrevious" destination="9Ug-5x-FTX" id="8ZE-ho-dri"/>
                         <outlet property="collectionTimeline" destination="ReI-JV-rlL" id="biO-70-PfZ"/>
                         <outlet property="colletionTodayProgress" destination="Hrb-Uc-Hfl" id="R1L-pe-Sff"/>
                         <outlet property="constraintHeightCollection" destination="AzT-JM-dDz" id="nHl-Zn-TMo"/>
