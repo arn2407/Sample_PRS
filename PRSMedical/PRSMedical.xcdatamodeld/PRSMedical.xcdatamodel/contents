@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Credential" representedClassName="Credential" syncable="YES">
+        <attribute name="emailID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Cushion" representedClassName="Cushion" syncable="YES">
+        <attribute name="cushionUUID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneAlert" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="sittingInfo" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="CushionSittingInfo" inverseName="cushion" inverseEntity="CushionSittingInfo" syncable="YES"/>
+    </entity>
+    <entity name="CushionSittingInfo" representedClassName="CushionSittingInfo" syncable="YES">
+        <attribute name="sittingTimes" optional="YES" attributeType="Transformable" customClassName="NSArray" syncable="YES"/>
+        <attribute name="updateTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="cushion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cushion" inverseName="sittingInfo" inverseEntity="Cushion" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Credential" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Cushion" positionX="43" positionY="24" width="128" height="103"/>
+        <element name="CushionSittingInfo" positionX="223" positionY="42" width="128" height="88"/>
+    </elements>
+</model>

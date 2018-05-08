@@ -1,0 +1,911 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		193B8496208699990004ACA3 /* CushionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193B8495208699990004ACA3 /* CushionViewController.swift */; };
+		284891D4207DEAA100F50C25 /* CushionsScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284891D3207DEAA100F50C25 /* CushionsScanningViewController.swift */; };
+		284BFFCE208480E300E34FFF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284BFFCD208480E300E34FFF /* AboutViewController.swift */; };
+		284BFFD12084868100E34FFF /* FaqTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284BFFD02084868100E34FFF /* FaqTableViewCell.swift */; };
+		284BFFD32084870600E34FFF /* FAQsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284BFFD22084870600E34FFF /* FAQsViewController.swift */; };
+		286647A020776F9900EF8D36 /* SetupManualViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2866479F20776F9900EF8D36 /* SetupManualViewController.swift */; };
+		286647A22077782900EF8D36 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286647A12077782900EF8D36 /* LoaderView.swift */; };
+		28F21E0C2096EA6600940FDE /* CushionSittingInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F21E0A2096EA6600940FDE /* CushionSittingInfo+CoreDataProperties.swift */; };
+		28F21E0D2096EA6600940FDE /* CushionSittingInfo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F21E0B2096EA6600940FDE /* CushionSittingInfo+CoreDataClass.swift */; };
+		28F21E0F2097157800940FDE /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F21E0E2097157800940FDE /* SettingsViewModel.swift */; };
+		28F21E11209AF76700940FDE /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F21E10209AF76500940FDE /* ForgotPasswordViewModel.swift */; };
+		28F21E13209C6F1900940FDE /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28F21E12209C6F1900940FDE /* credentials.plist */; };
+		960D49EF208B2175008F0603 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960D49EE208B2175008F0603 /* BluetoothManager.swift */; };
+		960D4A03208B5E3D008F0603 /* CBUUID+RKBlueKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 960D49F6208B5E3D008F0603 /* CBUUID+RKBlueKit.m */; };
+		960D4A04208B5E3D008F0603 /* RKBlueKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 960D49F8208B5E3D008F0603 /* RKBlueKit.m */; };
+		960D4A05208B5E3D008F0603 /* RKPeripheralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 960D49FC208B5E3D008F0603 /* RKPeripheralManager.m */; };
+		960D4A06208B5E3D008F0603 /* RKCentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 960D49FE208B5E3D008F0603 /* RKCentralManager.m */; };
+		960D4A07208B5E3D008F0603 /* RKPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 960D4A01208B5E3D008F0603 /* RKPeripheral.m */; };
+		960D4A09208CCE43008F0603 /* CushionDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960D4A08208CCE43008F0603 /* CushionDetailTableViewController.swift */; };
+		960D4A0B208E33DB008F0603 /* PlusMinusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960D4A0A208E33DB008F0603 /* PlusMinusButton.swift */; };
+		960D4A0D208E3D35008F0603 /* SetSittingTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960D4A0C208E3D35008F0603 /* SetSittingTimeViewController.swift */; };
+		960D4A0F208E4778008F0603 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960D4A0E208E4778008F0603 /* ToastView.swift */; };
+		960DC3BD2093108D00E6CCE0 /* DasboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DC3BC2093108D00E6CCE0 /* DasboardViewModel.swift */; };
+		960DC3BF20935CCD00E6CCE0 /* CushionDataUploadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DC3BE20935CCD00E6CCE0 /* CushionDataUploadViewModel.swift */; };
+		960DC3C12093670900E6CCE0 /* CushionTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DC3C02093670900E6CCE0 /* CushionTransactionViewModel.swift */; };
+		960DC3C32095AD1800E6CCE0 /* BadgesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960DC3C22095AD1800E6CCE0 /* BadgesDetailViewController.swift */; };
+		9617310D2073CACF00F98E6C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617310C2073CACF00F98E6C /* ProfileViewController.swift */; };
+		9617310F2073DCAB00F98E6C /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617310E2073DCAB00F98E6C /* CircleView.swift */; };
+		961731122073E37500F98E6C /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961731112073E37500F98E6C /* ProfileViewCell.swift */; };
+		96173115207F6AB600F98E6C /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96173114207F6AB600F98E6C /* RegistrationViewModel.swift */; };
+		96173117207F786A00F98E6C /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96173116207F786A00F98E6C /* ServiceAPI.swift */; };
+		96173119207F852B00F98E6C /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96173118207F852B00F98E6C /* BaseViewModel.swift */; };
+		9617311B207FA4CE00F98E6C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617311A207FA4CE00F98E6C /* LoginViewModel.swift */; };
+		96173121207FB2EA00F98E6C /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96173120207FB2EA00F98E6C /* CoreDataStack.swift */; };
+		96173124207FB39400F98E6C /* Credential+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96173122207FB39400F98E6C /* Credential+CoreDataClass.swift */; };
+		96173125207FB39400F98E6C /* Credential+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96173123207FB39400F98E6C /* Credential+CoreDataProperties.swift */; };
+		96173127207FB96000F98E6C /* SecondRunRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96173126207FB95F00F98E6C /* SecondRunRootViewController.swift */; };
+		9617312B207FBFBF00F98E6C /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617312A207FBFBF00F98E6C /* DashboardViewController.swift */; };
+		9617312D207FC6CD00F98E6C /* GoalProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617312C207FC6CD00F98E6C /* GoalProgressView.swift */; };
+		961731502080613000F98E6C /* TodayStatusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617314F2080613000F98E6C /* TodayStatusCollectionViewCell.swift */; };
+		961731522080673400F98E6C /* TimlineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961731512080673400F98E6C /* TimlineCollectionViewCell.swift */; };
+		9652A560206BF80E00278D7A /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652A55F206BF80E00278D7A /* MainTabBarViewController.swift */; };
+		9652A563206D322800278D7A /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652A562206D322800278D7A /* BaseCollectionViewCell.swift */; };
+		9652A565206D327900278D7A /* TabBarItemCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652A564206D327900278D7A /* TabBarItemCollectionCell.swift */; };
+		9652A568206D4B7700278D7A /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652A567206D4B7700278D7A /* SettingsTableViewController.swift */; };
+		967FE99120557467008E96E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967FE99020557467008E96E4 /* AppDelegate.swift */; };
+		967FE99320557467008E96E4 /* PRSHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967FE99220557467008E96E4 /* PRSHomeViewController.swift */; };
+		967FE99620557467008E96E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967FE99420557467008E96E4 /* Main.storyboard */; };
+		967FE99920557467008E96E4 /* PRSMedical.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 967FE99720557467008E96E4 /* PRSMedical.xcdatamodeld */; };
+		967FE99B20557467008E96E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967FE99A20557467008E96E4 /* Assets.xcassets */; };
+		967FE99E20557467008E96E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967FE99C20557467008E96E4 /* LaunchScreen.storyboard */; };
+		967FE9A62056D783008E96E4 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967FE9A52056D783008E96E4 /* WalkThroughViewController.swift */; };
+		96879C01205BC5B800774F5A /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96879C00205BC5B800774F5A /* PagingView.swift */; };
+		96879C04205BCF3200774F5A /* RoundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96879C03205BCF3200774F5A /* RoundedCornerView.swift */; };
+		96879C07205BD0F200774F5A /* ProtocolHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96879C06205BD0F200774F5A /* ProtocolHelper.swift */; };
+		96879C09205BDE1E00774F5A /* TemplateImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96879C08205BDE1E00774F5A /* TemplateImageView.swift */; };
+		96879C0B205E602200774F5A /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96879C0A205E602200774F5A /* SignupViewController.swift */; };
+		96879C0D205E72AE00774F5A /* ExtensionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96879C0C205E72AE00774F5A /* ExtensionHelper.swift */; };
+		96879C0F20615ED800774F5A /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96879C0E20615ED800774F5A /* RoundedButton.swift */; };
+		96879C112061727700774F5A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96879C102061727700774F5A /* SignInViewController.swift */; };
+		96879C132062BF0F00774F5A /* ForgetPasswodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96879C122062BF0F00774F5A /* ForgetPasswodViewController.swift */; };
+		96879C152062C05600774F5A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96879C142062C05600774F5A /* BaseViewController.swift */; };
+		968DBE3220869F77002BED97 /* Cushion+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968DBE3020869F76002BED97 /* Cushion+CoreDataProperties.swift */; };
+		968DBE3320869F77002BED97 /* Cushion+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968DBE3120869F77002BED97 /* Cushion+CoreDataClass.swift */; };
+		968DBE36208796E2002BED97 /* MyCushionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968DBE35208796E2002BED97 /* MyCushionCell.swift */; };
+		969D9E8A2082350200835106 /* CushionConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969D9E892082350200835106 /* CushionConnectViewController.swift */; };
+		969D9E8D208311DE00835106 /* BadgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969D9E8C208311DE00835106 /* BadgesViewController.swift */; };
+		969D9E90208313BC00835106 /* BadgesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969D9E8F208313BC00835106 /* BadgesCollectionViewCell.swift */; };
+		E441B12AA0DE66A844685C77 /* Pods_PRSMedical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D622F9D02C139599E27E02E5 /* Pods_PRSMedical.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		193B8495208699990004ACA3 /* CushionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CushionViewController.swift; sourceTree = "<group>"; };
+		284891D3207DEAA100F50C25 /* CushionsScanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CushionsScanningViewController.swift; sourceTree = "<group>"; };
+		284BFFCD208480E300E34FFF /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		284BFFD02084868100E34FFF /* FaqTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqTableViewCell.swift; sourceTree = "<group>"; };
+		284BFFD22084870600E34FFF /* FAQsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQsViewController.swift; sourceTree = "<group>"; };
+		2866479F20776F9900EF8D36 /* SetupManualViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupManualViewController.swift; sourceTree = "<group>"; };
+		286647A12077782900EF8D36 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		28F21E0A2096EA6600940FDE /* CushionSittingInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CushionSittingInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		28F21E0B2096EA6600940FDE /* CushionSittingInfo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CushionSittingInfo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		28F21E0E2097157800940FDE /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		28F21E10209AF76500940FDE /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		28F21E12209C6F1900940FDE /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
+		95D6A8260D57A22316DB404D /* Pods-PRSMedical.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRSMedical.release.xcconfig"; path = "Pods/Target Support Files/Pods-PRSMedical/Pods-PRSMedical.release.xcconfig"; sourceTree = "<group>"; };
+		960D49EE208B2175008F0603 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		960D49F0208B5E27008F0603 /* PRSMedical-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PRSMedical-Bridging-Header.h"; sourceTree = "<group>"; };
+		960D49F6208B5E3D008F0603 /* CBUUID+RKBlueKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CBUUID+RKBlueKit.m"; sourceTree = "<group>"; };
+		960D49F7208B5E3D008F0603 /* RKBlueKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBlueKit.h; sourceTree = "<group>"; };
+		960D49F8208B5E3D008F0603 /* RKBlueKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKBlueKit.m; sourceTree = "<group>"; };
+		960D49F9208B5E3D008F0603 /* CBUUID+RKBlueKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CBUUID+RKBlueKit.h"; sourceTree = "<group>"; };
+		960D49FB208B5E3D008F0603 /* RKPeripheralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPeripheralManager.h; sourceTree = "<group>"; };
+		960D49FC208B5E3D008F0603 /* RKPeripheralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPeripheralManager.m; sourceTree = "<group>"; };
+		960D49FE208B5E3D008F0603 /* RKCentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKCentralManager.m; sourceTree = "<group>"; };
+		960D49FF208B5E3D008F0603 /* RKPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKPeripheral.h; sourceTree = "<group>"; };
+		960D4A00208B5E3D008F0603 /* RKCentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKCentralManager.h; sourceTree = "<group>"; };
+		960D4A01208B5E3D008F0603 /* RKPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKPeripheral.m; sourceTree = "<group>"; };
+		960D4A02208B5E3D008F0603 /* RKBlueBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKBlueBlocks.h; sourceTree = "<group>"; };
+		960D4A08208CCE43008F0603 /* CushionDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CushionDetailTableViewController.swift; sourceTree = "<group>"; };
+		960D4A0A208E33DB008F0603 /* PlusMinusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMinusButton.swift; sourceTree = "<group>"; };
+		960D4A0C208E3D35008F0603 /* SetSittingTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSittingTimeViewController.swift; sourceTree = "<group>"; };
+		960D4A0E208E4778008F0603 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		960DC3BC2093108D00E6CCE0 /* DasboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DasboardViewModel.swift; sourceTree = "<group>"; };
+		960DC3BE20935CCD00E6CCE0 /* CushionDataUploadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CushionDataUploadViewModel.swift; sourceTree = "<group>"; };
+		960DC3C02093670900E6CCE0 /* CushionTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CushionTransactionViewModel.swift; sourceTree = "<group>"; };
+		960DC3C22095AD1800E6CCE0 /* BadgesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesDetailViewController.swift; sourceTree = "<group>"; };
+		9617310C2073CACF00F98E6C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9617310E2073DCAB00F98E6C /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		961731112073E37500F98E6C /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
+		96173114207F6AB600F98E6C /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		96173116207F786A00F98E6C /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
+		96173118207F852B00F98E6C /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		9617311A207FA4CE00F98E6C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		96173120207FB2EA00F98E6C /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		96173122207FB39400F98E6C /* Credential+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Credential+CoreDataClass.swift"; sourceTree = "<group>"; };
+		96173123207FB39400F98E6C /* Credential+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Credential+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		96173126207FB95F00F98E6C /* SecondRunRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRunRootViewController.swift; sourceTree = "<group>"; };
+		9617312A207FBFBF00F98E6C /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		9617312C207FC6CD00F98E6C /* GoalProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalProgressView.swift; sourceTree = "<group>"; };
+		9617314F2080613000F98E6C /* TodayStatusCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayStatusCollectionViewCell.swift; sourceTree = "<group>"; };
+		961731512080673400F98E6C /* TimlineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimlineCollectionViewCell.swift; sourceTree = "<group>"; };
+		9652A55F206BF80E00278D7A /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		9652A562206D322800278D7A /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		9652A564206D327900278D7A /* TabBarItemCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemCollectionCell.swift; sourceTree = "<group>"; };
+		9652A567206D4B7700278D7A /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		967FE98D20557467008E96E4 /* PRSMedical.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PRSMedical.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		967FE99020557467008E96E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		967FE99220557467008E96E4 /* PRSHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRSHomeViewController.swift; sourceTree = "<group>"; };
+		967FE99520557467008E96E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		967FE99820557467008E96E4 /* PRSMedical.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PRSMedical.xcdatamodel; sourceTree = "<group>"; };
+		967FE99A20557467008E96E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		967FE99D20557467008E96E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		967FE99F20557467008E96E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		967FE9A52056D783008E96E4 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
+		96879C00205BC5B800774F5A /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
+		96879C03205BCF3200774F5A /* RoundedCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerView.swift; sourceTree = "<group>"; };
+		96879C06205BD0F200774F5A /* ProtocolHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolHelper.swift; sourceTree = "<group>"; };
+		96879C08205BDE1E00774F5A /* TemplateImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateImageView.swift; sourceTree = "<group>"; };
+		96879C0A205E602200774F5A /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		96879C0C205E72AE00774F5A /* ExtensionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelper.swift; sourceTree = "<group>"; };
+		96879C0E20615ED800774F5A /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		96879C102061727700774F5A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		96879C122062BF0F00774F5A /* ForgetPasswodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswodViewController.swift; sourceTree = "<group>"; };
+		96879C142062C05600774F5A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		968DBE3020869F76002BED97 /* Cushion+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cushion+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		968DBE3120869F77002BED97 /* Cushion+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cushion+CoreDataClass.swift"; sourceTree = "<group>"; };
+		968DBE35208796E2002BED97 /* MyCushionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCushionCell.swift; sourceTree = "<group>"; };
+		969D9E892082350200835106 /* CushionConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CushionConnectViewController.swift; sourceTree = "<group>"; };
+		969D9E8C208311DE00835106 /* BadgesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesViewController.swift; sourceTree = "<group>"; };
+		969D9E8F208313BC00835106 /* BadgesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCollectionViewCell.swift; sourceTree = "<group>"; };
+		D622F9D02C139599E27E02E5 /* Pods_PRSMedical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PRSMedical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE519BBEFBC627C06EDEB332 /* Pods-PRSMedical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRSMedical.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PRSMedical/Pods-PRSMedical.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		967FE98A20557467008E96E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E441B12AA0DE66A844685C77 /* Pods_PRSMedical.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		284891D2207DEA8900F50C25 /* Cusions */ = {
+			isa = PBXGroup;
+			children = (
+				284891D3207DEAA100F50C25 /* CushionsScanningViewController.swift */,
+				969D9E892082350200835106 /* CushionConnectViewController.swift */,
+				193B8495208699990004ACA3 /* CushionViewController.swift */,
+				960D4A08208CCE43008F0603 /* CushionDetailTableViewController.swift */,
+				960D4A0C208E3D35008F0603 /* SetSittingTimeViewController.swift */,
+			);
+			path = Cusions;
+			sourceTree = "<group>";
+		};
+		284BFFCF2084864500E34FFF /* Faqs Cell */ = {
+			isa = PBXGroup;
+			children = (
+				284BFFD02084868100E34FFF /* FaqTableViewCell.swift */,
+			);
+			path = "Faqs Cell";
+			sourceTree = "<group>";
+		};
+		369B4E799AA1775103DC41BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D622F9D02C139599E27E02E5 /* Pods_PRSMedical.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63E8FCD308C0E4775A30291B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE519BBEFBC627C06EDEB332 /* Pods-PRSMedical.debug.xcconfig */,
+				95D6A8260D57A22316DB404D /* Pods-PRSMedical.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		960D49F4208B5E3D008F0603 /* RKBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				960D49F5208B5E3D008F0603 /* BluethoothKit */,
+				960D49FA208B5E3D008F0603 /* Peripheral */,
+				960D49FD208B5E3D008F0603 /* Central */,
+			);
+			path = RKBluetooth;
+			sourceTree = "<group>";
+		};
+		960D49F5208B5E3D008F0603 /* BluethoothKit */ = {
+			isa = PBXGroup;
+			children = (
+				960D49F9208B5E3D008F0603 /* CBUUID+RKBlueKit.h */,
+				960D49F6208B5E3D008F0603 /* CBUUID+RKBlueKit.m */,
+				960D49F7208B5E3D008F0603 /* RKBlueKit.h */,
+				960D49F8208B5E3D008F0603 /* RKBlueKit.m */,
+			);
+			path = BluethoothKit;
+			sourceTree = "<group>";
+		};
+		960D49FA208B5E3D008F0603 /* Peripheral */ = {
+			isa = PBXGroup;
+			children = (
+				960D49FB208B5E3D008F0603 /* RKPeripheralManager.h */,
+				960D49FC208B5E3D008F0603 /* RKPeripheralManager.m */,
+			);
+			path = Peripheral;
+			sourceTree = "<group>";
+		};
+		960D49FD208B5E3D008F0603 /* Central */ = {
+			isa = PBXGroup;
+			children = (
+				960D4A00208B5E3D008F0603 /* RKCentralManager.h */,
+				960D49FE208B5E3D008F0603 /* RKCentralManager.m */,
+				960D49FF208B5E3D008F0603 /* RKPeripheral.h */,
+				960D4A01208B5E3D008F0603 /* RKPeripheral.m */,
+				960D4A02208B5E3D008F0603 /* RKBlueBlocks.h */,
+			);
+			path = Central;
+			sourceTree = "<group>";
+		};
+		961731102073E34B00F98E6C /* Profile Cell */ = {
+			isa = PBXGroup;
+			children = (
+				961731112073E37500F98E6C /* ProfileViewCell.swift */,
+			);
+			path = "Profile Cell";
+			sourceTree = "<group>";
+		};
+		96173113207F6A9900F98E6C /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				96173118207F852B00F98E6C /* BaseViewModel.swift */,
+				96173114207F6AB600F98E6C /* RegistrationViewModel.swift */,
+				9617311A207FA4CE00F98E6C /* LoginViewModel.swift */,
+				960DC3BC2093108D00E6CCE0 /* DasboardViewModel.swift */,
+				960DC3BE20935CCD00E6CCE0 /* CushionDataUploadViewModel.swift */,
+				960DC3C02093670900E6CCE0 /* CushionTransactionViewModel.swift */,
+				28F21E0E2097157800940FDE /* SettingsViewModel.swift */,
+				28F21E10209AF76500940FDE /* ForgotPasswordViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		9617311C207FB2C700F98E6C /* Core Data Stack */ = {
+			isa = PBXGroup;
+			children = (
+				96173120207FB2EA00F98E6C /* CoreDataStack.swift */,
+				96173122207FB39400F98E6C /* Credential+CoreDataClass.swift */,
+				96173123207FB39400F98E6C /* Credential+CoreDataProperties.swift */,
+				968DBE3120869F77002BED97 /* Cushion+CoreDataClass.swift */,
+				968DBE3020869F76002BED97 /* Cushion+CoreDataProperties.swift */,
+				28F21E0B2096EA6600940FDE /* CushionSittingInfo+CoreDataClass.swift */,
+				28F21E0A2096EA6600940FDE /* CushionSittingInfo+CoreDataProperties.swift */,
+			);
+			path = "Core Data Stack";
+			sourceTree = "<group>";
+		};
+		96173128207FBF7500F98E6C /* Home Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				9652A55F206BF80E00278D7A /* MainTabBarViewController.swift */,
+				96173129207FBF9C00F98E6C /* Dashboard */,
+				969D9E8E2083138C00835106 /* Badges */,
+				284891D2207DEA8900F50C25 /* Cusions */,
+				9652A566206D4B5D00278D7A /* Settings */,
+			);
+			path = "Home Tabs";
+			sourceTree = "<group>";
+		};
+		96173129207FBF9C00F98E6C /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				9617312A207FBFBF00F98E6C /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		9617314E208060FB00F98E6C /* Dashboard Timeline Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9617314F2080613000F98E6C /* TodayStatusCollectionViewCell.swift */,
+				961731512080673400F98E6C /* TimlineCollectionViewCell.swift */,
+			);
+			path = "Dashboard Timeline Cell";
+			sourceTree = "<group>";
+		};
+		9652A561206D31FC00278D7A /* Helper Controls */ = {
+			isa = PBXGroup;
+			children = (
+				96879C00205BC5B800774F5A /* PagingView.swift */,
+				96879C03205BCF3200774F5A /* RoundedCornerView.swift */,
+				96879C0E20615ED800774F5A /* RoundedButton.swift */,
+				96879C08205BDE1E00774F5A /* TemplateImageView.swift */,
+				9617310E2073DCAB00F98E6C /* CircleView.swift */,
+				286647A12077782900EF8D36 /* LoaderView.swift */,
+				9617312C207FC6CD00F98E6C /* GoalProgressView.swift */,
+				960D4A0A208E33DB008F0603 /* PlusMinusButton.swift */,
+				960D4A0E208E4778008F0603 /* ToastView.swift */,
+			);
+			path = "Helper Controls";
+			sourceTree = "<group>";
+		};
+		9652A566206D4B5D00278D7A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9652A567206D4B7700278D7A /* SettingsTableViewController.swift */,
+				9617310C2073CACF00F98E6C /* ProfileViewController.swift */,
+				2866479F20776F9900EF8D36 /* SetupManualViewController.swift */,
+				284BFFCD208480E300E34FFF /* AboutViewController.swift */,
+				284BFFD22084870600E34FFF /* FAQsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		967FE98420557467008E96E4 = {
+			isa = PBXGroup;
+			children = (
+				967FE98F20557467008E96E4 /* PRSMedical */,
+				967FE98E20557467008E96E4 /* Products */,
+				63E8FCD308C0E4775A30291B /* Pods */,
+				369B4E799AA1775103DC41BA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		967FE98E20557467008E96E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				967FE98D20557467008E96E4 /* PRSMedical.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		967FE98F20557467008E96E4 /* PRSMedical */ = {
+			isa = PBXGroup;
+			children = (
+				967FE99020557467008E96E4 /* AppDelegate.swift */,
+				9617311C207FB2C700F98E6C /* Core Data Stack */,
+				96879C02205BC92A00774F5A /* View Controllers */,
+				96879BFF205BC59B00774F5A /* Views */,
+				96173113207F6A9900F98E6C /* View Models */,
+				967FE99420557467008E96E4 /* Main.storyboard */,
+				96879C05205BD0DE00774F5A /* Helper */,
+				967FE99A20557467008E96E4 /* Assets.xcassets */,
+				967FE99C20557467008E96E4 /* LaunchScreen.storyboard */,
+				967FE99F20557467008E96E4 /* Info.plist */,
+				28F21E12209C6F1900940FDE /* credentials.plist */,
+				967FE99720557467008E96E4 /* PRSMedical.xcdatamodeld */,
+			);
+			path = PRSMedical;
+			sourceTree = "<group>";
+		};
+		96879BFF205BC59B00774F5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9652A561206D31FC00278D7A /* Helper Controls */,
+				961731102073E34B00F98E6C /* Profile Cell */,
+				9617314E208060FB00F98E6C /* Dashboard Timeline Cell */,
+				969D9E8B2083114000835106 /* Badges Cell */,
+				284BFFCF2084864500E34FFF /* Faqs Cell */,
+				968DBE34208796BF002BED97 /* Cushion Cell */,
+				9652A562206D322800278D7A /* BaseCollectionViewCell.swift */,
+				9652A564206D327900278D7A /* TabBarItemCollectionCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		96879C02205BC92A00774F5A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				96879C142062C05600774F5A /* BaseViewController.swift */,
+				96173126207FB95F00F98E6C /* SecondRunRootViewController.swift */,
+				967FE9A52056D783008E96E4 /* WalkThroughViewController.swift */,
+				967FE99220557467008E96E4 /* PRSHomeViewController.swift */,
+				96879C0A205E602200774F5A /* SignupViewController.swift */,
+				96879C102061727700774F5A /* SignInViewController.swift */,
+				96879C122062BF0F00774F5A /* ForgetPasswodViewController.swift */,
+				96173128207FBF7500F98E6C /* Home Tabs */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		96879C05205BD0DE00774F5A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				96879C06205BD0F200774F5A /* ProtocolHelper.swift */,
+				96879C0C205E72AE00774F5A /* ExtensionHelper.swift */,
+				96173116207F786A00F98E6C /* ServiceAPI.swift */,
+				960D49EE208B2175008F0603 /* BluetoothManager.swift */,
+				960D49F4208B5E3D008F0603 /* RKBluetooth */,
+				960D49F0208B5E27008F0603 /* PRSMedical-Bridging-Header.h */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		968DBE34208796BF002BED97 /* Cushion Cell */ = {
+			isa = PBXGroup;
+			children = (
+				968DBE35208796E2002BED97 /* MyCushionCell.swift */,
+			);
+			path = "Cushion Cell";
+			sourceTree = "<group>";
+		};
+		969D9E8B2083114000835106 /* Badges Cell */ = {
+			isa = PBXGroup;
+			children = (
+				969D9E8F208313BC00835106 /* BadgesCollectionViewCell.swift */,
+			);
+			path = "Badges Cell";
+			sourceTree = "<group>";
+		};
+		969D9E8E2083138C00835106 /* Badges */ = {
+			isa = PBXGroup;
+			children = (
+				969D9E8C208311DE00835106 /* BadgesViewController.swift */,
+				960DC3C22095AD1800E6CCE0 /* BadgesDetailViewController.swift */,
+			);
+			path = Badges;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		967FE98C20557467008E96E4 /* PRSMedical */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 967FE9A220557467008E96E4 /* Build configuration list for PBXNativeTarget "PRSMedical" */;
+			buildPhases = (
+				EDC00231B4843D6A97F96604 /* [CP] Check Pods Manifest.lock */,
+				967FE98920557467008E96E4 /* Sources */,
+				967FE98A20557467008E96E4 /* Frameworks */,
+				967FE98B20557467008E96E4 /* Resources */,
+				12EF10CD5E2549F4D91FF44A /* [CP] Embed Pods Frameworks */,
+				32398409BE582FB2A5F6A5D6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PRSMedical;
+			productName = PRSMedical;
+			productReference = 967FE98D20557467008E96E4 /* PRSMedical.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		967FE98520557467008E96E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Arun Kumar";
+				TargetAttributes = {
+					967FE98C20557467008E96E4 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 967FE98820557467008E96E4 /* Build configuration list for PBXProject "PRSMedical" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 967FE98420557467008E96E4;
+			productRefGroup = 967FE98E20557467008E96E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				967FE98C20557467008E96E4 /* PRSMedical */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		967FE98B20557467008E96E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967FE99E20557467008E96E4 /* LaunchScreen.storyboard in Resources */,
+				28F21E13209C6F1900940FDE /* credentials.plist in Resources */,
+				967FE99B20557467008E96E4 /* Assets.xcassets in Resources */,
+				967FE99620557467008E96E4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12EF10CD5E2549F4D91FF44A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PRSMedical/Pods-PRSMedical-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/EncryptedCoreData/EncryptedCoreData.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFInternationalization/MDFInternationalization.framework",
+				"${BUILT_PRODUCTS_DIR}/MDFTextAccessibility/MDFTextAccessibility.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionAnimator/MotionAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionInterchange/MotionInterchange.framework",
+				"${BUILT_PRODUCTS_DIR}/MotionTransitioning/MotionTransitioning.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLCipher/SQLCipher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EncryptedCoreData.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFInternationalization.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MDFTextAccessibility.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionInterchange.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MotionTransitioning.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLCipher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PRSMedical/Pods-PRSMedical-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32398409BE582FB2A5F6A5D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PRSMedical/Pods-PRSMedical-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PRSMedical/Pods-PRSMedical-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDC00231B4843D6A97F96604 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PRSMedical-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		967FE98920557467008E96E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9652A565206D327900278D7A /* TabBarItemCollectionCell.swift in Sources */,
+				9652A560206BF80E00278D7A /* MainTabBarViewController.swift in Sources */,
+				286647A22077782900EF8D36 /* LoaderView.swift in Sources */,
+				968DBE3320869F77002BED97 /* Cushion+CoreDataClass.swift in Sources */,
+				96879C0B205E602200774F5A /* SignupViewController.swift in Sources */,
+				28F21E0C2096EA6600940FDE /* CushionSittingInfo+CoreDataProperties.swift in Sources */,
+				960D4A03208B5E3D008F0603 /* CBUUID+RKBlueKit.m in Sources */,
+				969D9E8A2082350200835106 /* CushionConnectViewController.swift in Sources */,
+				28F21E11209AF76700940FDE /* ForgotPasswordViewModel.swift in Sources */,
+				961731122073E37500F98E6C /* ProfileViewCell.swift in Sources */,
+				960D4A0F208E4778008F0603 /* ToastView.swift in Sources */,
+				960D4A05208B5E3D008F0603 /* RKPeripheralManager.m in Sources */,
+				193B8496208699990004ACA3 /* CushionViewController.swift in Sources */,
+				96173119207F852B00F98E6C /* BaseViewModel.swift in Sources */,
+				960D4A09208CCE43008F0603 /* CushionDetailTableViewController.swift in Sources */,
+				96879C0D205E72AE00774F5A /* ExtensionHelper.swift in Sources */,
+				96879C132062BF0F00774F5A /* ForgetPasswodViewController.swift in Sources */,
+				967FE99320557467008E96E4 /* PRSHomeViewController.swift in Sources */,
+				967FE9A62056D783008E96E4 /* WalkThroughViewController.swift in Sources */,
+				96879C152062C05600774F5A /* BaseViewController.swift in Sources */,
+				969D9E90208313BC00835106 /* BadgesCollectionViewCell.swift in Sources */,
+				961731522080673400F98E6C /* TimlineCollectionViewCell.swift in Sources */,
+				9652A568206D4B7700278D7A /* SettingsTableViewController.swift in Sources */,
+				9617310D2073CACF00F98E6C /* ProfileViewController.swift in Sources */,
+				967FE99120557467008E96E4 /* AppDelegate.swift in Sources */,
+				960D4A0B208E33DB008F0603 /* PlusMinusButton.swift in Sources */,
+				969D9E8D208311DE00835106 /* BadgesViewController.swift in Sources */,
+				286647A020776F9900EF8D36 /* SetupManualViewController.swift in Sources */,
+				96879C01205BC5B800774F5A /* PagingView.swift in Sources */,
+				96173127207FB96000F98E6C /* SecondRunRootViewController.swift in Sources */,
+				96173125207FB39400F98E6C /* Credential+CoreDataProperties.swift in Sources */,
+				9652A563206D322800278D7A /* BaseCollectionViewCell.swift in Sources */,
+				968DBE36208796E2002BED97 /* MyCushionCell.swift in Sources */,
+				9617312B207FBFBF00F98E6C /* DashboardViewController.swift in Sources */,
+				9617312D207FC6CD00F98E6C /* GoalProgressView.swift in Sources */,
+				960D4A0D208E3D35008F0603 /* SetSittingTimeViewController.swift in Sources */,
+				96173117207F786A00F98E6C /* ServiceAPI.swift in Sources */,
+				96879C0F20615ED800774F5A /* RoundedButton.swift in Sources */,
+				960DC3BF20935CCD00E6CCE0 /* CushionDataUploadViewModel.swift in Sources */,
+				961731502080613000F98E6C /* TodayStatusCollectionViewCell.swift in Sources */,
+				96879C09205BDE1E00774F5A /* TemplateImageView.swift in Sources */,
+				96173124207FB39400F98E6C /* Credential+CoreDataClass.swift in Sources */,
+				960D49EF208B2175008F0603 /* BluetoothManager.swift in Sources */,
+				28F21E0D2096EA6600940FDE /* CushionSittingInfo+CoreDataClass.swift in Sources */,
+				9617311B207FA4CE00F98E6C /* LoginViewModel.swift in Sources */,
+				960DC3BD2093108D00E6CCE0 /* DasboardViewModel.swift in Sources */,
+				96879C112061727700774F5A /* SignInViewController.swift in Sources */,
+				960D4A07208B5E3D008F0603 /* RKPeripheral.m in Sources */,
+				284891D4207DEAA100F50C25 /* CushionsScanningViewController.swift in Sources */,
+				968DBE3220869F77002BED97 /* Cushion+CoreDataProperties.swift in Sources */,
+				96173115207F6AB600F98E6C /* RegistrationViewModel.swift in Sources */,
+				960D4A04208B5E3D008F0603 /* RKBlueKit.m in Sources */,
+				9617310F2073DCAB00F98E6C /* CircleView.swift in Sources */,
+				96879C07205BD0F200774F5A /* ProtocolHelper.swift in Sources */,
+				967FE99920557467008E96E4 /* PRSMedical.xcdatamodeld in Sources */,
+				960D4A06208B5E3D008F0603 /* RKCentralManager.m in Sources */,
+				284BFFD32084870600E34FFF /* FAQsViewController.swift in Sources */,
+				960DC3C12093670900E6CCE0 /* CushionTransactionViewModel.swift in Sources */,
+				96879C04205BCF3200774F5A /* RoundedCornerView.swift in Sources */,
+				960DC3C32095AD1800E6CCE0 /* BadgesDetailViewController.swift in Sources */,
+				284BFFCE208480E300E34FFF /* AboutViewController.swift in Sources */,
+				96173121207FB2EA00F98E6C /* CoreDataStack.swift in Sources */,
+				284BFFD12084868100E34FFF /* FaqTableViewCell.swift in Sources */,
+				28F21E0F2097157800940FDE /* SettingsViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		967FE99420557467008E96E4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				967FE99520557467008E96E4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		967FE99C20557467008E96E4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				967FE99D20557467008E96E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		967FE9A020557467008E96E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		967FE9A120557467008E96E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		967FE9A320557467008E96E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE519BBEFBC627C06EDEB332 /* Pods-PRSMedical.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 57XMX83KJX;
+				INFOPLIST_FILE = PRSMedical/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.btalk.prsMedical;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a467be59-6f38-462f-be9a-2e30db62108d";
+				PROVISIONING_PROFILE_SPECIFIER = PRSMEDICALDEVELOPMENTPROFILE;
+				SWIFT_OBJC_BRIDGING_HEADER = "PRSMedical/Helper/PRSMedical-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		967FE9A420557467008E96E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95D6A8260D57A22316DB404D /* Pods-PRSMedical.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 57XMX83KJX;
+				INFOPLIST_FILE = PRSMedical/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.btalk.prsMedical;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a467be59-6f38-462f-be9a-2e30db62108d";
+				PROVISIONING_PROFILE_SPECIFIER = PRSMEDICALDEVELOPMENTPROFILE;
+				SWIFT_OBJC_BRIDGING_HEADER = "PRSMedical/Helper/PRSMedical-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		967FE98820557467008E96E4 /* Build configuration list for PBXProject "PRSMedical" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				967FE9A020557467008E96E4 /* Debug */,
+				967FE9A120557467008E96E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		967FE9A220557467008E96E4 /* Build configuration list for PBXNativeTarget "PRSMedical" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				967FE9A320557467008E96E4 /* Debug */,
+				967FE9A420557467008E96E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		967FE99720557467008E96E4 /* PRSMedical.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				967FE99820557467008E96E4 /* PRSMedical.xcdatamodel */,
+			);
+			currentVersion = 967FE99820557467008E96E4 /* PRSMedical.xcdatamodel */;
+			path = PRSMedical.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 967FE98520557467008E96E4 /* Project object */;
+}
