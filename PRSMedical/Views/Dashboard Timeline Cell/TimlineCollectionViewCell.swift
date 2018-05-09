@@ -35,7 +35,8 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
         
         chart.rightAxis.enabled = false
         chart.xAxis.enabled = true
-        chart.xAxis.granularity = 3600 * 24
+        chart.xAxis.avoidFirstLastClippingEnabled = true
+//        chart.xAxis.granularity = 3600 * 24
         chart.xAxis.valueFormatter = DateValueFormatter()
         chart.xAxis.centerAxisLabelsEnabled = true
         chart.xAxis.labelPosition = .top
@@ -60,8 +61,9 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
         
         chart.rightAxis.enabled = false
         chart.xAxis.enabled = true
-        chart.xAxis.granularity = 3600 * 24
-        chart.xAxis.valueFormatter = DateValueFormatter()
+        chart.xAxis.avoidFirstLastClippingEnabled = true
+//        chart.xAxis.granularity = 3600 * 24
+       chart.xAxis.valueFormatter = DateValueFormatter()
         chart.xAxis.centerAxisLabelsEnabled = true
         chart.xAxis.labelPosition = .top
         return chart
@@ -89,6 +91,7 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
     var chartData = [(Double , TimeInterval)]()
     {
         didSet{
+            
             chartType == .line ?  updateLineDataSet() : updateBarDataSet()
         }
     }
@@ -116,10 +119,11 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
     private func updateLineDataSet()
     {
     
-        
         if chartData.isEmpty {
             lineChart.noDataText = "No Cushion found"
             return}
+        lineChart.xAxis.setLabelCount(chartData.count, force: true)
+
     let values = chartData.compactMap{ChartDataEntry(x: $0.1, y: $0.0)}
 
        lineDataSet.values = values
@@ -138,24 +142,18 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
         if chartData.isEmpty {
             barChart.noDataText = "No Cushion found"
             return}
-//        let values = chartData.compactMap{BarChartDataEntry(x: $0.1, y: 20)}
-//
-//        let barchartDataSet = BarChartDataSet(values: values, label: "")
-//        barchartDataSet.drawIconsEnabled = false
-//        barchartDataSet.drawValuesEnabled = false
-//
-        let yVals = chartData.map { (i) -> BarChartDataEntry in
+        barChart.xAxis.setLabelCount(chartData.count, force: true)
+
+        let values = chartData.compactMap{BarChartDataEntry.init(x: $0.1, yValues: [$0.0])}
+
+        let barchartDataSet = BarChartDataSet(values: values, label: "")
+        barchartDataSet.drawIconsEnabled = false
+        barchartDataSet.drawValuesEnabled = false
+        barchartDataSet.setColor(#colorLiteral(red: 0.5019607843, green: 0.7058823529, blue: 0.2549019608, alpha: 1))
+     
         
-            
-            return BarChartDataEntry(x: i.1, yValues: [i.0])
-        }
-        
-        let set = BarChartDataSet(values: yVals, label: "")
-        set.drawIconsEnabled = false
-        set.setColor(#colorLiteral(red: 0.5019607843, green: 0.7058823529, blue: 0.2549019608, alpha: 1))
-        
-        let data = BarChartData(dataSet: set)
-        data.barWidth = 1.0
+        let data = BarChartData(dataSet: barchartDataSet)
+        data.barWidth = 0.9
         
         barChart.data = data
     }
