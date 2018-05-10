@@ -117,8 +117,14 @@ class ProfileViewController: UIViewController  {
             guard let `self` = self else {return}
             if success
             {
+                if let email = self.userInfoInputs?.email , let password = self.userInfoInputs?.password
+                {
                 self.saveObject(false, forKey: .firstRun)
+                Credential.delete()
+                let newCredential = Credential.newCredential(forContext: CoreDataStack.dataStack.manageObjectContext)
+                newCredential.saveCredential(withEmailID: email , password: password)
                 self.performSegue(withIdentifier: "segueSetupMaual", sender: nil)
+                }
             }
             else
             {

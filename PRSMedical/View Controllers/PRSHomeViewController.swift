@@ -58,16 +58,12 @@ class PRSHomeViewController: UIViewController {
         default:
             isGoogleSignIn = true
             isFacebookSignIn = false
-          if  GIDSignIn.sharedInstance().hasAuthInKeychain()
-          {
-                GIDSignIn.sharedInstance().signInSilently()
-            }
-            else
-          {
+       
+          
              GIDSignIn.sharedInstance().delegate = self
              GIDSignIn.sharedInstance().uiDelegate = self
              GIDSignIn.sharedInstance().signIn()
-            }
+            
         }
     }
     

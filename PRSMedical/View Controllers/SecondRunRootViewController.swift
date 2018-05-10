@@ -42,6 +42,9 @@ class SecondRunRootViewController: UIViewController {
                     self.pushTo(vc: loginHome)
                     
                 })
+                
+                Credential.delete()
+                
                 self.showAlert(withTitle: "Message", msg: self.loginVM.msg, actions: alertOK)
                 return
             }

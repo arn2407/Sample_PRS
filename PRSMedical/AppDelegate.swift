@@ -33,14 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
         if let isAppFirstRun = getValue(forKey: .firstRun) as? Bool , !isAppFirstRun
         {
-            moveTOPRSHome()
+            moveToSecondRoot()
         }
         UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
         return true
     }
 
     
-    func moveTOPRSHome() {
+    func moveToSecondRoot() {
       let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let home = storyboard.viewController() as SecondRunRootViewController
         

@@ -920,7 +920,7 @@ our Terms of Service and Privacy Policy.</string>
                                             <action selector="actionTimelinePageChange:" destination="usb-Fv-kwU" eventType="touchUpInside" id="NST-nk-2JF"/>
                                         </connections>
                                     </button>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ReI-JV-rlL">
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ReI-JV-rlL">
                                         <rect key="frame" x="8" y="58" width="359" height="180"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KvY-4K-N44">

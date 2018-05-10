@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 
+
 @objc(Credential)
 public class Credential: NSManagedObject {
     @objc class func newCredential(forContext context : NSManagedObjectContext) -> Credential
@@ -40,6 +41,7 @@ public class Credential: NSManagedObject {
     }
     
    class func delete()  {
+
         if let currentCredential = Credential.getCredentialEntity()
         {
             CoreDataStack.dataStack.manageObjectContext.delete(currentCredential)

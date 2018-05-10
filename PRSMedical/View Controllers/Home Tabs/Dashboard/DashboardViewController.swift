@@ -511,7 +511,7 @@ extension DashboardViewController
                 return (Double(sittingInfo.averagesittingtime) ?? 0.0  , sittingInfo.date.getDate(for : "dd/MM/yyyy")?.timeIntervalSince1970 ?? 0.0)
             })
             
-            if let cushionServer = arr.first(where: {$0.date == Date().getString(for : "dd/MM/yyyy")})
+            if let cushionServer = arr.last
             {
                 self.arrToday[0].value =  "\(cushionServer.averagesittingtime) min"
                 self.arrToday[1].value = ""

@@ -10,6 +10,11 @@ import UIKit
 import CoreData
 import EncryptedCoreData
 
+import GoogleSignIn
+import FacebookCore
+import FacebookLogin
+import FBSDKLoginKit
+
 
 class CoreDataStack: NSObject {
     
@@ -89,6 +94,15 @@ class CoreDataStack: NSObject {
     
     func resetDB(_ completion : @escaping(Bool)->())
     {
+        isGoogleSignIn = false
+        isFacebookSignIn = false
+        if  GIDSignIn.sharedInstance().hasAuthInKeychain()
+        {
+            GIDSignIn.sharedInstance().signOut()
+        }
+        if (FBSDKAccessToken.current()) != nil {
+            LoginManager().logOut()
+        }
         let context = self.manageObjectContext
         DispatchQueue.init(label: "resetingDB").async {
             self.persistentContainer.performBackgroundTask { (_) in
