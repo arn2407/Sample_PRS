@@ -102,16 +102,11 @@ extension CushionViewController : CollectionViewDelegates
         let device = devices[indexPath.item]
         cell.labelName.text = device.deviceName
         cell.batteryLevel.textColor = device.battery <= 20 ? .red : #colorLiteral(red: 0.2980392157, green: 0.8509803922, blue: 0.3921568627, alpha: 1)
-        if device.chargerFlag == 1
-        {
-           cell.batteryLevel.text = "Cushion is charging"
-        }
-        else
-        {
-        cell.batteryLevel.text = "\(device.battery) %"
-        }
-        cell.buttonSetting.isEnabled = device.connected == 1
-        cell.settingLabel.textColor = device.connected == 1 ? .black : .lightGray
+      
+            cell.batteryLevel.text = device.chargerFlag == 1 ? "Cushion is charging" : "\(device.battery) %"
+      
+        cell.buttonSetting.isEnabled = true
+        cell.settingLabel.textColor =  .black
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
