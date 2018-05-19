@@ -12,7 +12,7 @@
 
 @interface RKPeripheralManager : NSObject
 @property(nonatomic, readonly) BOOL isAdvertising;
-@property(nonatomic, readonly) CBPeripheralManagerState state;
+@property(nonatomic, readonly) CBManagerState state;
 @property (nonatomic,copy)RKObjectChangedBlock onStatedUpdated;
 @property (nonatomic,copy)RKPeripheralManagerStatedChnagedBlock onWillRestoreState;
 @property (nonatomic,copy)RKCentralSubscriptionBlock onSubscribedBlock;

@@ -15,7 +15,7 @@ enum ChartType {
 }
 class TimlineCollectionViewCell: BaseCollectionViewCell {
     
-    var limit = 0.0
+    var limit = 4.0
     
     private lazy var lineChart : LineChartView = {
         let chart = LineChartView()
@@ -58,9 +58,11 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
         chart.leftAxis.axisMinimum = 0
         chart.leftAxis.axisMaximum = 90
         chart.leftAxis.setLabelCount(7, force: true)
+        chart.leftAxis.labelTextColor = #colorLiteral(red: 0.5921568627, green: 0.5921568627, blue: 0.5921568627, alpha: 1)
         
         chart.rightAxis.enabled = false
         chart.xAxis.enabled = true
+        chart.xAxis.labelTextColor = #colorLiteral(red: 0.5921568627, green: 0.5921568627, blue: 0.5921568627, alpha: 1)
 //        chart.xAxis.granularity = 3600 * 24
        chart.xAxis.valueFormatter = DateValueFormatter()
         chart.xAxis.centerAxisLabelsEnabled = true
@@ -74,8 +76,8 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
         set.lineWidth = 3.0
         set.circleRadius = 4.0
         set.circleHoleRadius = 2.5
-        set.setColor(#colorLiteral(red: 0.5019607843, green: 0.7058823529, blue: 0.2549019608, alpha: 1))
-        set.setCircleColor(#colorLiteral(red: 0.1960784314, green: 0.3960784314, blue: 0.6862745098, alpha: 1))
+        set.setColor(#colorLiteral(red: 0.1960784314, green: 0.3960784314, blue: 0.6862745098, alpha: 1))
+        set.setCircleColor(#colorLiteral(red: 0.5019607843, green: 0.7058823529, blue: 0.2549019608, alpha: 1))
         set.highlightColor = .white
         set.drawValuesEnabled = false
         return set
@@ -88,7 +90,7 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
             chartType == .line ?  setupLineChart() : setupBarChart()
         }
     }
-    var chartData = [(Double , TimeInterval)]()
+    var chartData = [([Double] , TimeInterval)]()
     {
         didSet{
             
@@ -124,7 +126,7 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
             return}
         lineChart.xAxis.setLabelCount(chartData.count, force: true)
 
-    let values = chartData.compactMap{ChartDataEntry(x: $0.1, y: $0.0)}
+    let values = chartData.compactMap{ChartDataEntry(x: $0.1, y: $0.0.reduce(0, +)/Double($0.0.count))}
 
        lineDataSet.values = values
 
@@ -143,18 +145,28 @@ class TimlineCollectionViewCell: BaseCollectionViewCell {
             barChart.noDataText = "No Cushion found"
             return}
         barChart.xAxis.setLabelCount(chartData.count, force: true)
-        let yVals = chartData.enumerated().map { (value) -> BarChartDataEntry in
+//        let yVals = chartData.enumerated().map { (value) -> BarChartDataEntry in
+//
+//            return BarChartDataEntry(x: Double(value.element.1), yValues: value.element.0)
+//        }
+        
+        let dataSets = chartData.map { (value) -> BarChartDataSet in
             
-            return BarChartDataEntry(x: Double(value.element.1), yValues: [value.element.0])
+            
+            let colors : [NSUIColor] = value.0.map{$0 > self.limit ? #colorLiteral(red: 0.8784313725, green: 0.3411764706, blue: 0.4117647059, alpha: 1) : #colorLiteral(red: 0.1960784314, green: 0.3960784314, blue: 0.6862745098, alpha: 1)}
+            let entries = BarChartDataEntry(x: value.1, yValues: value.0)
+            
+            let set = BarChartDataSet(values: [entries], label: "")
+            set.drawIconsEnabled = false
+            set.drawValuesEnabled = false
+            set.colors = colors
+            return set
         }
 
-        let barchartDataSet = BarChartDataSet(values: yVals, label: "")
-        barchartDataSet.drawIconsEnabled = false
-        barchartDataSet.drawValuesEnabled = false
-        barchartDataSet.setColor(#colorLiteral(red: 0.5019607843, green: 0.7058823529, blue: 0.2549019608, alpha: 1))
+      
      
         
-        let data = BarChartData(dataSet: barchartDataSet)
+        let data = BarChartData(dataSets: dataSets)
         
         barChart.data = data
     }

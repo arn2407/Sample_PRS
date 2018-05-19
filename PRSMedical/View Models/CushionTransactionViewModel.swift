@@ -45,6 +45,7 @@ struct CushionTransaction : Codable
      let averagesittingtime : String
      let stepcount : String
     let totaltime : String
+    let alerttime : String
     
  
 }

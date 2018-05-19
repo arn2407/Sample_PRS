@@ -26,6 +26,9 @@ class GoalProgressView: UIView {
     @IBInspectable var progress : CGFloat = 20
         {
         didSet{
+   
+                progressColor = (goalHour * 60) < progress ?  #colorLiteral(red: 0.8784313725, green: 0.3411764706, blue: 0.4117647059, alpha: 1) : #colorLiteral(red: 0.3568627451, green: 0.768627451, blue: 0.4941176471, alpha: 1)
+            
             setNeedsDisplay()
         }
     

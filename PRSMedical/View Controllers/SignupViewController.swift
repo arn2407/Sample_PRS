@@ -16,7 +16,8 @@ class SignupViewController: BaseViewController {
     @IBOutlet weak var textFieldEmail : UITextField!
     @IBOutlet weak var textFieldPassword : UITextField!
     
-    
+    @IBOutlet weak var imageViewWarning : UIImageView!
+    @IBOutlet weak var imageViewCompleteRegistration : UIImageView!
     
    
     
@@ -33,11 +34,19 @@ class SignupViewController: BaseViewController {
     
         
         textFieldPassword.clearButtonMode = .never
-        
+        setErrorText = ""
       
         // Do any additional setup after loading the view.
     }
 
+    private var setErrorText : String = ""
+    {
+        didSet{
+            imageViewWarning.isHidden = setErrorText.isEmpty
+            labelError.text = setErrorText
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
@@ -66,10 +75,10 @@ class SignupViewController: BaseViewController {
         {
             self.view.endEditing(true)
             guard let email = textFieldEmail.text , !email.isEmpty , email.isValidEmail() else {
-                    labelError.text = "Please enter a valid email"
+                   setErrorText = "Please enter a valid email"
                 return false}
             guard let password = textFieldPassword.text , !password.isEmpty else {
-                labelError.text = "Wrong password"
+                setErrorText = "Wrong password"
                 return false}
             
         }
@@ -98,9 +107,9 @@ extension SignupViewController : UITextFieldDelegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
         switch textField {
         case textFieldEmail:
-                labelError.text = ""
+              setErrorText = ""
         default:
-            labelError.text = ""
+           setErrorText = ""
         }
     }
 }

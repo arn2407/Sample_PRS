@@ -19,7 +19,6 @@
 @property (nonatomic,strong) NSDictionary * initializedOptions;
 @property (nonatomic,strong) dispatch_queue_t queue;
 @property(nonatomic,assign) BOOL isAdvertising;
-@property(nonatomic,assign) CBPeripheralManagerState state;
 @end
 #pragma mark - implementation
 @implementation RKPeripheralManager
@@ -130,7 +129,7 @@
 {
     [_peripheralManager setDesiredConnectionLatency: latency forCentral:central];
 }
-- (CBPeripheralManagerState) state
+- (CBManagerState) state
 {
 
     return self.peripheralManager.state;

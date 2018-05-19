@@ -26,6 +26,7 @@ let aspectRatio = deviceSize.height / 667.0
 
 let iPhonX = UIScreen.main.nativeBounds.height == 2436
 
+let iPhoneSE = UIScreen.main.nativeBounds.height == 1136.0
 
 
 var isNavigatedBySignUP = false
@@ -244,9 +245,9 @@ extension UITextField {
         }
     }
     
-    func addLeadingIcon(_ icon : UIImage)  {
+    func addLeadingIcon(_ icon : UIImage , contentMode : UIViewContentMode = .scaleAspectFit)  {
         let leftIconView = UIImageView(image: icon)
-        leftIconView.contentMode = .scaleAspectFit
+        leftIconView.contentMode = contentMode
         leftIconView.frame = CGRect(x: 0, y: 0, width: 30, height: 23)
         leftView = leftIconView
         leftViewMode = .always

@@ -16,9 +16,9 @@ class SetSittingTimeViewController: UIViewController {
         super.viewDidLoad()
         timing = cushion.alerttime
         
-        if timing <= 10
+        if timing < 15
         {
-            timing = 30
+            timing = 15
         }
         // Do any additional setup after loading the view.
     }
@@ -35,7 +35,7 @@ class SetSittingTimeViewController: UIViewController {
     {
         switch sender.tag {
         case 0:
-            if timing > 30
+            if timing > 15
             {
                 timing -= 15
             }
@@ -49,6 +49,8 @@ class SetSittingTimeViewController: UIViewController {
     
     @IBAction func actionMakeGoal(_ sender : UIButton)
     {
+        if cushion.connected == 1
+        {
         guard let tabVC = self.tabBarController as? MainTabBarViewController else {return}
         if timing == cushion.alerttime {return}
         
@@ -65,6 +67,12 @@ class SetSittingTimeViewController: UIViewController {
                 self.performSegue(withIdentifier: "segueExit", sender: nil)
             }
             
+        }
+        }
+        else
+        {
+            let actionOK : AlertAction = ("OK" , .default , nil)
+            showAlert(withTitle: "Message", msg: "\(cushion.deviceName) is not connected.", actions: actionOK)
         }
     }
 

@@ -118,6 +118,7 @@ extension CushionsScanningViewController : TableViewDelegates
         headerView.textLabel?.font = UIFont.systemFont(ofSize: 13)
         headerView.textLabel?.textColor = #colorLiteral(red: 0.2862745098, green: 0.2862745098, blue: 0.2862745098, alpha: 1)
         headerView.backgroundView?.backgroundColor = .white
+        headerView.backgroundColor = .white
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -126,6 +127,7 @@ extension CushionsScanningViewController : TableViewDelegates
         cell.textLabel?.text = peripheral.name
         cell.detailTextLabel?.text = peripheral.identifier.uuidString
         cell.accessoryType = indexPath.section == 0 ?  .disclosureIndicator : .none
+         cell.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9764705882, blue: 0.9764705882, alpha: 1)
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

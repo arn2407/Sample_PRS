@@ -17,10 +17,25 @@ class PRSHomeViewController: UIViewController {
         let vm = LoginViewModel()
         return vm
     }()
+    
+    
+    @IBOutlet weak var constraintImageHeight : NSLayoutConstraint!
+    @IBOutlet weak var constraintLabelCushionActiveHeight : NSLayoutConstraint!
+    @IBOutlet weak var constraintGAPHeight : NSLayoutConstraint!
+    @IBOutlet weak var constraintRootStackBottomSpace : NSLayoutConstraint!
+    @IBOutlet weak var constraintBottomLabelBottomSpace : NSLayoutConstraint!
+    
     @IBOutlet weak var signInButton: GIDSignInButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        if iPhoneSE{
+            constraintImageHeight.constant = 85
+            constraintLabelCushionActiveHeight.constant = 30
+            constraintGAPHeight.constant = 10
+            constraintRootStackBottomSpace.constant = 12
+            constraintBottomLabelBottomSpace.constant = 8
+            
+        }
         
 
         // Do any additional setup after loading the view, typically from a nib.

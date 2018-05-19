@@ -455,7 +455,7 @@ class CushionServer: NSObject {
       self.rtcTimeStamp = Double(timestamp)
         let command = Data(bytes: bytes, count: bytes.count)
         sendCommand(command) { (data) in
-            
+
         }
     }
     
@@ -621,7 +621,7 @@ class CushionServer: NSObject {
             let cushion = Cushion.getCushion(for: self.identifier)
           let  totalTime = cushion?.getSittingInfo(of: Date())?.timeIntervals.reduce(0, +) ?? self.sittingInterVal
             
-            let requestModel = CushionTransaction(userid: userEmailID, cid: self.identifier, cushionname: self.deviceName, date: Date().getString(for: "dd/MM/yyyy"), averagesittingtime: "\(self.sittingInterVal)", stepcount: stepCount , totaltime : "\(totalTime)")
+            let requestModel = CushionTransaction(userid: userEmailID, cid: self.identifier, cushionname: self.deviceName, date: Date().getString(for: "dd/MM/yyyy"), averagesittingtime: "\(self.sittingInterVal)", stepcount: stepCount , totaltime : "\(totalTime)" , alerttime : "\(alerttime)")
             do {
                 let data =   try JSONEncoder().encode(requestModel)
                 let parameters = try JSONSerialization.jsonObject(with: data, options: .mutableLeaves) as! [String : Any]

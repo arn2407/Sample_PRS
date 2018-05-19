@@ -103,6 +103,7 @@ extension SettingsTableViewController : TableViewDelegates
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeReusableCell(for: indexPath) as UITableViewCell
         cell.textLabel?.text = tableItems[indexPath.section].rowNames[indexPath.row].rowName
+        cell.backgroundColor = #colorLiteral(red: 0.9764705882, green: 0.9764705882, blue: 0.9764705882, alpha: 1)
         return cell
     }
     
@@ -113,6 +114,7 @@ extension SettingsTableViewController : TableViewDelegates
         headerView.textLabel?.font = UIFont.systemFont(ofSize: 13)
         headerView.textLabel?.textColor = #colorLiteral(red: 0.2862745098, green: 0.2862745098, blue: 0.2862745098, alpha: 1)
         headerView.backgroundView?.backgroundColor = .white
+         headerView.backgroundColor = .white
     }
     
 

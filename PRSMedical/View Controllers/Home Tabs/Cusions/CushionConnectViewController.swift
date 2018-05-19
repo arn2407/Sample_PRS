@@ -88,7 +88,7 @@ class CushionConnectViewController: UIViewController {
     {
         let cushionObj = Cushion.newCushion(forContext: CoreDataStack.dataStack.manageObjectContext)
         cushionObj.saveCushionDetail(withUUID: (peripheral?.identifier.uuidString)!, name: cushionName, phoneAlert: false)
-        self.view.backgroundColor = #colorLiteral(red: 0.5019607843, green: 0.7058823529, blue: 0.6470588235, alpha: 1)
+        self.view.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.7529411765, blue: 0, alpha: 1)
         imageView.isHidden = false
         if let tabVC =  getTabBarController()
         {

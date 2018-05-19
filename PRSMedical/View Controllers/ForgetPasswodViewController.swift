@@ -20,7 +20,11 @@ class ForgetPasswodViewController: BaseViewController {
         super.viewDidLoad()
       
         title = "Forgot Password?"
-        textFieldEmail.addLeadingIcon(#imageLiteral(resourceName: "email_tf_icon"))
+        let leftIconView = UIImageView(image: #imageLiteral(resourceName: "email_tf_icon"))
+        leftIconView.contentMode = .scaleAspectFit
+        leftIconView.frame = CGRect(x: 0, y: 0, width: 30, height: 16)
+       textFieldEmail.leftView = leftIconView
+        textFieldEmail.leftViewMode = .always
 
         // Do any additional setup after loading the view.
     }

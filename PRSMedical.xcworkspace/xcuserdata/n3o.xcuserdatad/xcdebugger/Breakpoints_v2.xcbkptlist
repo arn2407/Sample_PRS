@@ -116,7 +116,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PRSMedical/View Controllers/Home Tabs/Cusions/CushionViewController.swift"
-            timestampString = "547005883.534986"
+            timestampString = "548402462.797434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "172"
@@ -131,92 +131,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PRSMedical/Helper/BluetoothManager.swift"
-            timestampString = "547005883.535062"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "493"
-            endingLineNumber = "493"
-            landmarkName = "readLogsData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PRSMedical/Helper/BluetoothManager.swift"
-            timestampString = "547005883.535113"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "296"
-            endingLineNumber = "296"
-            landmarkName = "getValueFromDevice(for:peripheral:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PRSMedical/View Controllers/Home Tabs/Dashboard/DashboardViewController.swift"
-            timestampString = "547578166.3397731"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "425"
-            endingLineNumber = "425"
-            landmarkName = "updateTransactionData(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PRSMedical.DashboardViewController.(updateTransactionData in _3AB531B114F0374945692197D4B05CEF)(PRSMedical.CushionServer) -&gt; ()"
-                  moduleName = "PRSMedical"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/n3o/Desktop/Git%20Hub/Sample%20PRS/PRSMedical/View%20Controllers/Home%20Tabs/Dashboard/DashboardViewController.swift"
-                  timestampString = "547578166.49231"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "425"
-                  endingLineNumber = "425"
-                  offsetFromSymbolStart = "1877">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.String&gt;) -&gt; () in PRSMedical.DashboardViewController.(updateTransactionData in _3AB531B114F0374945692197D4B05CEF)(PRSMedical.CushionServer) -&gt; ()"
-                  moduleName = "PRSMedical"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/n3o/Desktop/Git%20Hub/Sample%20PRS/PRSMedical/View%20Controllers/Home%20Tabs/Dashboard/DashboardViewController.swift"
-                  timestampString = "547578166.496346"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "425"
-                  endingLineNumber = "425"
-                  offsetFromSymbolStart = "66">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "PRSMedical/View Controllers/PRSHomeViewController.swift"
-            timestampString = "547578166.3404109"
+            timestampString = "548402462.797628"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "SignInByOthers(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -228,11 +148,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PRSMedical/View Controllers/PRSHomeViewController.swift"
-            timestampString = "547578166.340495"
+            timestampString = "548402462.797706"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "SignInByOthers(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -244,11 +164,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PRSMedical/View Controllers/PRSHomeViewController.swift"
-            timestampString = "547578166.340566"
+            timestampString = "548402462.7978131"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "sign(_:didSignInFor:withError:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -259,13 +179,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PRSMedical/View Controllers/Home Tabs/Dashboard/DashboardViewController.swift"
-            timestampString = "547578166.3406349"
+            filePath = "PRSMedical/Helper/RKBluetooth/Peripheral/RKPeripheralManager.m"
+            timestampString = "548402462.7978801"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "480"
-            endingLineNumber = "480"
-            landmarkName = "loadTimeLineData()"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-state"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -275,29 +195,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PRSMedical/View Controllers/Home Tabs/Dashboard/DashboardViewController.swift"
-            timestampString = "547578166.341049"
+            filePath = "PRSMedical/Helper/BluetoothManager.swift"
+            timestampString = "548402462.797945"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "516"
-            endingLineNumber = "516"
-            landmarkName = "loadTimeLineData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PRSMedical/View Controllers/Home Tabs/Dashboard/DashboardViewController.swift"
-            timestampString = "547578166.341426"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "522"
-            endingLineNumber = "522"
-            landmarkName = "loadTimeLineData()"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
+            landmarkName = "getValueFromDevice(for:peripheral:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

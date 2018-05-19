@@ -13,7 +13,7 @@ class CushionViewController: UIViewController {
     
     @IBOutlet weak var collectionViewPeripherals : UICollectionView!
 
-    @IBOutlet weak var labelError : UILabel!
+    @IBOutlet weak var viewError : UIView!
     private var devices : [CushionServer] = []
     
     
@@ -50,7 +50,7 @@ class CushionViewController: UIViewController {
         let lowChargingCushion = self.devices.filter{$0.connected == 1 && $0.battery < 21 && $0.chargerFlag == 0}.last
         
         
-        labelError.isHidden = lowChargingCushion == nil
+        viewError.isHidden = lowChargingCushion == nil
     }
 
     

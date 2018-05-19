@@ -12,10 +12,15 @@ class BadgesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var  imageView : UIImageView!
     @IBOutlet weak var labelBadgeName : UILabel!
     @IBOutlet weak var labelBadgeLevel : UILabel!
+    @IBOutlet weak var constraintImageHeight : NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         radius = 8.0
+        if iPhoneSE
+        {
+            constraintImageHeight.constant = 50
+        }
     }
     
     var isActive : Bool = false
