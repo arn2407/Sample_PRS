@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MediaPlayer
 
 class CushionDetailTableViewController: UITableViewController {
 
@@ -14,6 +15,13 @@ class CushionDetailTableViewController: UITableViewController {
     
     @IBOutlet weak var labelCushionName : UILabel!
     @IBOutlet weak var labelSittingTime : UILabel!
+    @IBOutlet weak var labelRingToneName : UILabel!
+    @IBOutlet weak var labelRingTonetitle : UILabel!
+    
+    
+    @IBOutlet weak var buttonNoVol : UIButton!
+    @IBOutlet weak var buttonFullVol : UIButton!
+    @IBOutlet weak var sliderVol : UISlider!
     @IBOutlet weak var switchPhone : UISwitch!
     @IBOutlet weak var switchViberation : UISwitch!
     
@@ -23,11 +31,13 @@ class CushionDetailTableViewController: UITableViewController {
         title = "Cushion: \(cushion.deviceName)"
         
         labelCushionName.text = cushion.deviceName
-        switchPhone.isOn = false
+        switchPhone.isOn = true
         switchViberation.isOn = cushion.vibration
     
         
         labelSittingTime.text = cushion.alerttime.formattedTime
+        
+        actionPhoneAlert(switchPhone)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -47,7 +57,17 @@ class CushionDetailTableViewController: UITableViewController {
     }
 
     @IBAction func actionPhoneAlert(_ sender : UISwitch)
-    {}
+    {
+        labelRingTonetitle.textColor = sender.isOn ? .black : #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5764705882, alpha: 1)
+        buttonNoVol.isEnabled = sender.isOn
+        buttonFullVol.isEnabled = sender.isOn
+        sliderVol.isEnabled = sender.isOn
+    }
+    
+    @IBAction func actionVolSlider(_ sender : UISlider)
+    {
+
+    }
   
     @IBAction func actionViberationAlert(_ sender : UISwitch)
     {
@@ -117,11 +137,32 @@ class CushionDetailTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    @IBAction func unwindSeguForRingtone(_ segue : UIStoryboardSegue)
+    {
+        let sourceVC = segue.source as! RingtoneTableViewController
+        labelRingToneName.text = sourceVC.ringtoneName
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        switch identifier {
+        case "segueRingtone":
+            return switchPhone.isOn
+        default:
+            return true
+        }
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if segue.identifier == "segueTiming"
+      switch segue.identifier
       {
+      case "segueTiming":
         let vc = segue.destination as! SetSittingTimeViewController
         vc.cushion = self.cushion
+      case "segueRingtone":
+        let vc = segue.destination as! RingtoneTableViewController
+        vc.ringtoneName = labelRingToneName.text ?? ""
+        vc.volume = sliderVol.value
+      default: break
         }
     }
  

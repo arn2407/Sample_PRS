@@ -11,6 +11,8 @@ import UIKit
 class ProfileViewController: UIViewController  {
 
     var userInfoInputs : RegistraionInput?
+    
+    @IBOutlet weak var constraintCollectionTopSpace : NSLayoutConstraint!
     @IBOutlet weak var viewPickerComponent : UIView!
     @IBOutlet weak var pickerComponent : UIPickerView!
     @IBOutlet weak var collectionBasicInfo : UICollectionView!
@@ -69,7 +71,11 @@ class ProfileViewController: UIViewController  {
         // Do any additional setup after loading the view.
     }
 
+  
+    
 
+
+   
     private func getCurrentInfoArray(for selection: InfoSelection) -> [String]
     {
         switch selection {
@@ -174,6 +180,9 @@ class ProfileViewController: UIViewController  {
     private func showPickerView()
     {
         if viewPickerComponent.isDescendant(of: view) {return}
+        if iPhoneSE {
+            animateCollectionView(withHeight: -75)
+        }
         let originFrame = CGRect(x: 0, y: view.bounds.height, width: view.bounds.width, height: 235.0)
         viewPickerComponent.frame = originFrame
         view.addSubview(viewPickerComponent)
@@ -187,6 +196,9 @@ class ProfileViewController: UIViewController  {
     
     private func closePickerView()
     {
+        if iPhoneSE {
+            animateCollectionView(withHeight: 27)
+        }
         UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: [.curveEaseOut], animations: {
             [weak self ] in
             guard let `self` = self else {return}
@@ -200,6 +212,20 @@ class ProfileViewController: UIViewController  {
             self.viewPickerComponent.removeFromSuperview()
         }
     }
+    
+
+    private func animateCollectionView(withHeight h : CGFloat)
+    {
+        view.updateConstraintsIfNeeded()
+        self.constraintCollectionTopSpace.constant = h
+        UIView.animate(withDuration: 0.25, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: [.curveEaseIn], animations: {
+            [weak self] in
+            guard let `self` = self else {return}
+            self.view.layoutIfNeeded()
+            
+            }, completion: nil)
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

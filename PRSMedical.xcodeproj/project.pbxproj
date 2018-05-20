@@ -75,6 +75,7 @@
 		969D9E8A2082350200835106 /* CushionConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969D9E892082350200835106 /* CushionConnectViewController.swift */; };
 		969D9E8D208311DE00835106 /* BadgesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969D9E8C208311DE00835106 /* BadgesViewController.swift */; };
 		969D9E90208313BC00835106 /* BadgesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969D9E8F208313BC00835106 /* BadgesCollectionViewCell.swift */; };
+		96EBD9C320B1E45800EA1956 /* RingtoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EBD9C220B1E45800EA1956 /* RingtoneTableViewController.swift */; };
 		E441B12AA0DE66A844685C77 /* Pods_PRSMedical.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D622F9D02C139599E27E02E5 /* Pods_PRSMedical.framework */; };
 /* End PBXBuildFile section */
 
@@ -157,6 +158,7 @@
 		969D9E892082350200835106 /* CushionConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CushionConnectViewController.swift; sourceTree = "<group>"; };
 		969D9E8C208311DE00835106 /* BadgesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesViewController.swift; sourceTree = "<group>"; };
 		969D9E8F208313BC00835106 /* BadgesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesCollectionViewCell.swift; sourceTree = "<group>"; };
+		96EBD9C220B1E45800EA1956 /* RingtoneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingtoneTableViewController.swift; sourceTree = "<group>"; };
 		D622F9D02C139599E27E02E5 /* Pods_PRSMedical.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PRSMedical.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE519BBEFBC627C06EDEB332 /* Pods-PRSMedical.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PRSMedical.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PRSMedical/Pods-PRSMedical.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +183,7 @@
 				193B8495208699990004ACA3 /* CushionViewController.swift */,
 				960D4A08208CCE43008F0603 /* CushionDetailTableViewController.swift */,
 				960D4A0C208E3D35008F0603 /* SetSittingTimeViewController.swift */,
+				96EBD9C220B1E45800EA1956 /* RingtoneTableViewController.swift */,
 			);
 			path = Cusions;
 			sourceTree = "<group>";
@@ -678,6 +681,7 @@
 				968DBE3220869F77002BED97 /* Cushion+CoreDataProperties.swift in Sources */,
 				96173115207F6AB600F98E6C /* RegistrationViewModel.swift in Sources */,
 				960D4A04208B5E3D008F0603 /* RKBlueKit.m in Sources */,
+				96EBD9C320B1E45800EA1956 /* RingtoneTableViewController.swift in Sources */,
 				9617310F2073DCAB00F98E6C /* CircleView.swift in Sources */,
 				96879C07205BD0F200774F5A /* ProtocolHelper.swift in Sources */,
 				967FE99920557467008E96E4 /* PRSMedical.xcdatamodeld in Sources */,
